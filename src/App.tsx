@@ -2,9 +2,8 @@ import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 import EmployeeList from "./components/EmployeeList";
-import { COUNTER_STATE } from "./constant/selectors";
+import Test from "./components/FormGenerator/FormGenerator";
 const App: React.FC = () => {
-  const { counter } = useSelector(COUNTER_STATE);
   return (
     <Container className="app" maxWidth="xl">
       <Grid
@@ -14,8 +13,11 @@ const App: React.FC = () => {
         alignItems={"center"}
         container
       >
-        <EmployeeList />
+        <Grid xl={4}> <Test />
+          <EmployeeList />
+        </Grid>
       </Grid>
+     
     </Container>
   );
 };
